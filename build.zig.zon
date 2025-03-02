@@ -1,5 +1,5 @@
 .{
-    .name = "mach-glfw",
+    .name = .mach_glfw,
     .version = "0.2.0",
     .paths = .{
         "src/",
@@ -16,4 +16,5 @@
             .hash = "122092fc63da3ff85d0e18e326f7f265050c0ba2510cdbbc25217ac6771484ed12b1",
         },
     },
+    .fingerprint = 0xa924846d4fd8e0ff,
 }
