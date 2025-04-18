@@ -1,6 +1,7 @@
 .{
     .name = .mach_glfw,
     .version = "0.2.0",
+    .fingerprint = 0xa924846d4fd8e0ff,
     .paths = .{
         "src/",
         "build.zig",
@@ -13,8 +14,7 @@
     .dependencies = .{
         .glfw = .{
             .url = "https://github.com/TibboddiT/glfw/archive/refs/heads/master.tar.gz",
-            .hash = "122092fc63da3ff85d0e18e326f7f265050c0ba2510cdbbc25217ac6771484ed12b1",
+            .hash = "glfw-0.0.0-KNqx68mpGQCF7DO9fWaxN-DoICRu6wgJZhr9HJFrCZwD",
         },
     },
-    .fingerprint = 0xa924846d4fd8e0ff,
 }
