@@ -14,7 +14,7 @@
     .dependencies = .{
         .glfw = .{
             .url = "https://github.com/TibboddiT/glfw/archive/refs/heads/master.tar.gz",
-            .hash = "glfw-0.0.0-KNqx68mpGQAODau1iMyraRRsqmT_rsUy9GaZYxTS4iLl",
+            .hash = "glfw-0.0.0-KNqx69epGQBOuIr6qfceLQr_XWuY0RYGv0tjTQzV88At",
         },
     },
 }
