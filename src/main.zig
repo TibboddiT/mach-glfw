@@ -247,6 +247,9 @@ const InitHint = enum(c_int) {
     ///
     /// Possible values are `WaylandLibdecorInitHint` enums.
     wayland_libdecor = c.GLFW_WAYLAND_LIBDECOR,
+
+    /// Win32 specific init hint.
+    win32_messages_in_fiber = c.GLFW_WIN32_MESSAGES_IN_FIBER,
 };
 
 /// Angle platform type hints for glfw.InitHint.angle_platform_type
