@@ -523,8 +523,8 @@ pub fn basicTest() !void {
     };
     defer window.destroy();
 
-    const start = std.time.milliTimestamp();
-    while (std.time.milliTimestamp() < start + 1000 and !window.shouldClose()) {
+    const start = try std.time.Instant.now();
+    while (std.time.Instant.since(try .now(), start) < std.time.ns_per_s and !window.shouldClose()) {
         c.glfwPollEvents();
     }
 }

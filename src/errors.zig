@@ -204,7 +204,7 @@ pub inline fn getError() ?Error {
     convertError(c.glfwGetError(&desc)) catch |error_code| {
         return .{
             .error_code = error_code,
-            .description = mem.sliceTo(desc, 0),
+            .description = @ptrCast(mem.sliceTo(desc, 0)),
         };
     };
     return null;
@@ -253,7 +253,7 @@ pub inline fn getErrorString() ?[:0]const u8 {
     var desc: [*c]const u8 = null;
     const error_code = c.glfwGetError(&desc);
     if (error_code != c.GLFW_NO_ERROR) {
-        return mem.sliceTo(desc, 0);
+        return @ptrCast(mem.sliceTo(desc, 0));
     }
     return null;
 }
@@ -302,7 +302,7 @@ pub fn setErrorCallback(comptime callback: ?fn (error_code: ErrorCode, descripti
         const CWrapper = struct {
             pub fn errorCallbackWrapper(err_int: c_int, c_description: [*c]const u8) callconv(.c) void {
                 convertError(err_int) catch |error_code| {
-                    user_callback(error_code, mem.sliceTo(c_description, 0));
+                    user_callback(error_code, @ptrCast(mem.sliceTo(c_description, 0)));
                 };
             }
         };
