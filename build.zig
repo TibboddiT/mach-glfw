@@ -26,7 +26,7 @@ pub fn build(b: *std.Build) !void {
             .optimize = optimize,
         }),
     });
-    main_tests.linkLibrary(glfw_dep.artifact("glfw"));
+    main_tests.root_module.linkLibrary(glfw_dep.artifact("glfw"));
     b.installArtifact(main_tests);
     test_step.dependOn(&b.addRunArtifact(main_tests).step);
 
