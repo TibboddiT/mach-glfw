@@ -523,19 +523,18 @@ pub fn basicTest() !void {
     };
     defer window.destroy();
 
-    const start = try std.time.Instant.now();
-    while (std.time.Instant.since(try .now(), start) < std.time.ns_per_s and !window.shouldClose()) {
+    const start = std.Io.Timestamp.now(std.testing.io, .awake);
+    while (start.untilNow(std.testing.io, .awake).nanoseconds < std.time.ns_per_s and !window.shouldClose()) {
         c.glfwPollEvents();
     }
 }
 
 test {
-    std.testing.refAllDeclsRecursive(@This());
+    std.testing.refAllDecls(@This());
 }
 
 test "getVersionString" {
-    std.debug.print("\nGLFW version v{}.{}.{}\n", .{ version.major, version.minor, version.revision });
-    std.debug.print("\nstring: {s}\n", .{getVersionString()});
+    _ = getVersionString();
 }
 
 test "init" {
