@@ -5,7 +5,7 @@
 
 const std = @import("std");
 
-const c = @import("c.zig").c;
+const c = @import("c");
 const Window = @import("Window.zig");
 const Action = @import("action.zig").Action;
 const GamepadAxis = @import("gamepad_axis.zig").GamepadAxis;

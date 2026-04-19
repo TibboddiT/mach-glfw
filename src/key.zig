@@ -16,7 +16,7 @@
 
 const std = @import("std");
 
-const cc = @import("c.zig").c;
+const cc = @import("c");
 
 const internal_debug = @import("internal_debug.zig");
 

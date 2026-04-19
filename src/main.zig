@@ -1,7 +1,7 @@
 const std = @import("std");
 const testing = std.testing;
 
-const c = @import("c.zig").c;
+const c = @import("c");
 
 const key = @import("key.zig");
 const errors = @import("errors.zig");
@@ -35,8 +35,11 @@ pub const version = @import("version.zig");
 pub const VideoMode = @import("VideoMode.zig");
 pub const Window = @import("Window.zig");
 pub const Cursor = @import("Cursor.zig");
-pub const Native = @import("native.zig").Native;
-pub const BackendOptions = @import("native.zig").BackendOptions;
+
+// TODO
+// pub const Native = @import("native.zig").Native;
+// pub const BackendOptions = @import("native.zig").BackendOptions;
+
 pub const Key = key.Key;
 pub const setClipboardString = @import("clipboard.zig").setClipboardString;
 pub const getClipboardString = @import("clipboard.zig").getClipboardString;

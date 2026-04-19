@@ -3,7 +3,7 @@
 const std = @import("std");
 const testing = std.testing;
 const mem = std.mem;
-const c = @import("c.zig").c;
+const c = @import("c");
 
 const glfw = @import("main.zig");
 const Image = @import("Image.zig");

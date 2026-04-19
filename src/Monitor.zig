@@ -3,7 +3,7 @@
 const std = @import("std");
 const mem = std.mem;
 const testing = std.testing;
-const c = @import("c.zig").c;
+const c = @import("c");
 
 const GammaRamp = @import("GammaRamp.zig");
 const VideoMode = @import("VideoMode.zig");
