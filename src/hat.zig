@@ -4,7 +4,7 @@ const c = @import("c");
 /// A bitmask of all Joystick hat states
 ///
 /// See glfw.Joystick.getHats for how these are used.
-pub const Hat = packed struct(u8) {
+pub const Hat = bitpack struct(u8) {
     up: bool = false,
     right: bool = false,
     down: bool = false,

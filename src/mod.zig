@@ -6,7 +6,7 @@ const c = @import("c");
 
 // must be in sync with GLFW C constants in modifier group, search for "@defgroup mods Modifier key flags"
 /// A bitmask of all key modifiers
-pub const Mods = packed struct(u8) {
+pub const Mods = bitpack struct(u8) {
     shift: bool = false,
     control: bool = false,
     alt: bool = false,
